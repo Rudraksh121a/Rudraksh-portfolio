@@ -1,0 +1,48 @@
+<div class="lg:max-w-lg w-full mx-auto text-center mt-8">
+    <h1 class="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl" id="project">Projects</h1>
+  </div>
+  
+
+  <div class="bg-white">
+    <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+      <h2 class="sr-only">Projects</h2>
+  
+      <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4    xl:gap-x-8">
+
+
+        {% for projects in project.all %}
+        
+        <div class="group relative transform transition-transform duration-300 hover:scale-110 p-4 bg-white rounded-lg shadow">
+            <a href="{% url 'detail' projects.id %}" class="block">
+                <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200">
+                    <img src="{{ projects.image.url }}" alt="Project Image 1" class="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-110">
+                </div>
+                <h3 class="mt-4 text-sm text-gray-1000 text-center font-bold ">
+                    {{ projects.title }}
+                </h3>
+               
+                <div class="mt-4 flex space-x-4">
+                    <a href="{{ projects.github_link }}" class="flex-grow">
+                        <button class="w-full px-4 py-2 text-white bg-blue-600 rounded hover:bg-blue-700">
+                            Github
+                        </button>
+                    </a>
+                    <a href="{{ projects.linkedin_link }}" class="flex-grow">
+                        <button class="w-full px-4 py-2 text-white bg-gray-600 rounded hover:bg-gray-700">
+                            LinkedIn
+                        </button>
+                    </a>
+                </div>
+            </a>
+        </div>
+        
+      
+        
+          {% endfor %}  
+              
+          
+  
+      </div>
+    </div>
+  </div>
+  

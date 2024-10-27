@@ -1,0 +1,60 @@
+{% load static tailwind_tags %}
+
+{% comment %} <div class="project-card">
+    <div class="image-container flex justify-center">
+        <img src="{{ projects.image.url }}" alt="{{ projects.title }} - Project Image" class="w-400 h-400 object-cover">
+    </div>
+
+    <div class="text-center mt-4">
+        <h3 class="text-lg text-gray-900 font-bold">
+            {{ projects.title }}
+        </h3>
+    </div>
+
+
+     {% endcomment %}
+     
+     <div class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="border border-gray-300 bg-white p-6 rounded-lg shadow-md">
+        {% for i in projects.description %}
+        {% if i == '.' %}
+            <div class="text-center mb-2">
+                <span class="text-gray-700 block">{{i}}</span>
+                
+                    <hr class="border-t border-gray-300 mx-auto w-1/2">
+                {% else %}
+                <span class="text-gray-700 block">{{i}}</span>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+    
+    
+    
+
+
+
+
+
+
+{% comment %} 
+    <div class="button-group mt-4 flex space-x-4">
+        <a href="{{ projects.github_link }}" class="flex-grow">
+            <button class="w-full px-4 py-2 text-white bg-blue-600 rounded hover:bg-blue-700 transition">
+                GitHub
+            </button>
+        </a>
+        <a href="{{ projects.linkedin_link }}" class="flex-grow">
+            <button class="w-full px-4 py-2 text-white bg-gray-600 rounded hover:bg-gray-700 transition">
+                LinkedIn
+            </button>
+        </a>
+    </div>
+</div> {% endcomment %}
+
+ 
+
+
+{% tailwind_css %}
