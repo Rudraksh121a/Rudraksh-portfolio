@@ -1,4 +1,4 @@
-Django==3.2.6
-Pillow==8.3.1
-django-tailwind==2.0.0
+Django
+Pillow
+django-tailwind
 gunicorn
