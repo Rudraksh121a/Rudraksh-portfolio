@@ -6,13 +6,7 @@ set -o errexit
 echo "Installing Python dependencies..."
 pip install -r requirements.txt
 
-# Install Node.js dependencies
-echo "Installing Node.js dependencies..."
-npm install
 
-# Build Tailwind CSS
-echo "Building Tailwind CSS..."
-npm run build:css
 
 # Collect static files
 echo "Collecting static files..."
